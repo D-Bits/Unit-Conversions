@@ -44,7 +44,7 @@ namespace UnitConversions
             else
             {
                 Console.WriteLine("Invalid choice. Please enter a valid int.");
-                UserOptions();
+                Program.Main(null);
             }
         }
     }
