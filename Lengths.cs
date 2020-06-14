@@ -64,13 +64,25 @@ namespace UnitConversions
             {
                Console.Write("Enter a number of feet to convert to meters: "); 
                int userFeet = Convert.ToInt32(Console.ReadLine());
-               Console.WriteLine($"{userFeet} feet equals {Lengths.MeterstoFeet(userFeet)} meters.");
+               Console.WriteLine($"{userFeet} feet equals {Lengths.FeettoMeters(userFeet)} meters.");
             }
             else if (userChoice == 2)
             {
                 Console.Write("Enter a number of meters to convert to feet: "); 
                 int userMeters = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"{userMeters} meter(s) equals {Lengths.MeterstoFeet(userMeters)} feet.");
+            }
+            else if (userChoice == 3)
+            {
+                Console.Write("Enter a number of miles to convert to kilometers: "); 
+                int userMiles = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{userMiles} mile(s) equals {Lengths.MilestoKilos(userMiles)} kilometers.");
+            }
+            else if (userChoice == 4)
+            {
+                Console.Write("Enter a number of kilometers to convert to miles: ");
+                int userKilos = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{userKilos} kilometers(s) equals {Lengths.MilestoKilos(userKilos)} mile(s).");
             }
         }
     }
