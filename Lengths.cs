@@ -6,28 +6,28 @@ namespace UnitConversions
 {
     public class Lengths
     {
-        public static double FeettoMeters(int feet)
+        static double FeettoMeters(int feet)
         {
             double meters = feet / 3.2808;
 
             return Math.Round(meters, 4);
         }
 
-        public static double MeterstoFeet(int meters)
+        static double MeterstoFeet(int meters)
         {
             double feet = meters * 3.2808;
 
             return Math.Round(feet, 4);
         }
 
-        public static double MilestoKilos(int miles)
+        static double MilestoKilos(int miles)
         {
             double kilos = miles / 0.62137;
 
             return Math.Round(kilos, 4);
         }
 
-        public static double KilostoMiles(int kilos)
+        static double KilostoMiles(int kilos)
         {
             double miles = kilos * 0.62137;
 
@@ -66,10 +66,10 @@ namespace UnitConversions
             }
             else if (userChoice == 1)
             {
-               Console.Write("Enter a number of feet to convert to meters: "); 
-               int userFeet = Convert.ToInt32(Console.ReadLine());
-               Console.WriteLine($"{userFeet} feet equals {Lengths.FeettoMeters(userFeet)} meters.");
-               Program.Main(null);
+                Console.Write("Enter a number of feet to convert to meters: "); 
+                int userFeet = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{userFeet} feet equals {Lengths.FeettoMeters(userFeet)} meters.");
+                Lengths.LengthChoices();
             }
             else if (userChoice == 2)
             {
@@ -94,6 +94,7 @@ namespace UnitConversions
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("Invalid choice. Please enter a valid int.");
                 Lengths.LengthChoices();
             }

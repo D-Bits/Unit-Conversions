@@ -10,6 +10,7 @@ namespace UnitConversions
             // Define user options in a dictionary
             Dictionary<int, string> userOptions = new Dictionary<int, string>();
 
+            userOptions.Add(0, "Exit Program.");
             userOptions.Add(1, "Length Conversions.");
             userOptions.Add(2, "Mass Conversions.");
 
@@ -33,7 +34,12 @@ namespace UnitConversions
             // Prompt the the user to enter a choice
             int userChoice = Convert.ToInt32(Console.ReadLine());
 
-            if (userChoice == 1)
+            // Exit program
+            if (userChoice == 0)
+            {
+                
+            }
+            else if (userChoice == 1)
             {
                 Lengths.LengthChoices();
             }

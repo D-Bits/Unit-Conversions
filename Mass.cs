@@ -6,28 +6,28 @@ namespace UnitConversions
 {
     public class Mass
     {
-        public static double PoundstoKilos(int pounds)
+        static double PoundstoKilos(double pounds)
         {
             double kilos = pounds / 2.2046;
 
             return Math.Round(kilos, 4);
         }
 
-        public static double KilostoPounds(int kilos)
+        static double KilostoPounds(double kilos)
         {
             double miles = kilos * 2.2046;
             
             return Math.Round(miles, 4);
         }
 
-        public static double OuncestoGrams(int ounces)
+        static double OuncestoGrams(double ounces)
         {
             double grams = ounces / 0.035274;
 
             return Math.Round(grams, 4);
         }
 
-        public static double GramstoOunces(int grams)
+        static double GramstoOunces(double grams)
         {
             double ounces = grams * 0.035274;
 
@@ -66,12 +66,19 @@ namespace UnitConversions
             else if (userChoice == 1)
             {
                 Console.Write("Enter a number of pounds to convert to kilograms: "); 
-                int userLbs = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"{userLbs} feet equals {Mass.PoundstoKilos(userLbs)} meters.");
+                double userLbs = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"{userLbs} lbs equals {Mass.PoundstoKilos(userLbs)} kilograms.");
+            }
+            else if (userChoice == 2)
+            {
+                Console.Write("Enter a number of kilograms to convert to pounds: ");
+                double userKilos = Convert.ToDouble(Console.ReadLine());
+                 
             }
             else
             {
-                Console.WriteLine("Invalid choice. Please enter a valid int.");
+                Console.WriteLine();
+                Console.WriteLine("***Invalid choice. Please enter a valid int.***");
                 Mass.MassChoices();
             }
         }
