@@ -68,24 +68,28 @@ namespace UnitConversions
                 Console.Write("Enter a number of pounds to convert to kilograms: "); 
                 double userLbs = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine($"{userLbs} lbs equals {Mass.PoundstoKilos(userLbs)} kgs.");
+                Program.Main(null);
             }
             else if (userChoice == 2)
             {
                 Console.Write("Enter a number of kilograms to convert to pounds: ");
                 double userKilos = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine($"{userKilos} kgs equals {Mass.PoundstoKilos(userKilos)} lbs."); 
+                Program.Main(null);
             }
             else if (userChoice == 3)
             {
                 Console.Write("Enter a number of ounces to convert to grams: ");
                 double userOz = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"{userOz} oz equals {Mass.PoundstoKilos(userOz)} grams."); 
+                Console.WriteLine($"{userOz} oz equals {Mass.PoundstoKilos(userOz)} grams.");
+                Program.Main(null); 
             }
             else if (userChoice == 4)
             {
                 Console.Write("Enter a number of grams to convert to ounces: ");
                 double userGrams = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"{userGrams} grams equals {Mass.PoundstoKilos(userGrams)} oz."); 
+                Console.WriteLine($"{userGrams} grams equals {Mass.PoundstoKilos(userGrams)} oz.");
+                Program.Main(null); 
             }
             else
             {
